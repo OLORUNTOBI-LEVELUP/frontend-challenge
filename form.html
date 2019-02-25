@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" type="text/css" href="form.css">
+        <link href="https://fonts.googleapis.com/css?family=Coiny|Poppins" rel="stylesheet">
+
+    </head>
+    <body>
+        <form class="validate">
+            <div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type = "text" placeholder="Enter Name" id="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type = "email" placeholder="Enter Email" id="email"  pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" required>
+                </div>
+
+                <div>
+                    <label for="password">Password(must contain at least 1 uppercase character, 1 lowercase character, and 1 number)</label>
+                    <input type = "password" placeholder="Enter password" id = "password" required minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" >
+                </div>
+                
+                <div>
+                    <label for="age">Age</label>
+                    <input type ="number" placeholder="Enter Age" id = "age" required min="18" max="80">
+                </div>
+                <div>
+                    <strong>Gender</strong>
+                    <label for="gender" class="label-normal">
+                        <input type="radio" name="radio" id="gender" required>Male
+                    </label>
+                    <label for="gender2" class="label-normal">
+                        <input type="radio" name="radio" id="gender2" required>Female
+                    </label>
+                </div>
+                <div>
+                    <strong>Do you have Pets?</strong>
+                    <label for="pets" class="label-pet">
+                        <input type="checkbox" name="checkbox" id="pets" required>Dog
+                        <input type="checkbox" name="checkbox" id="pets" required>Cat
+                    </label>
+                
+                </div>
+                <input type="submit" class="button" value="Submit">
+                
+                
+            
+            </div>
+        </form>
+        <script src="form.js"></script>
+    </body>
+</html>
